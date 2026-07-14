@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane fx:controller="com.example.pooprojet.HelloController"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fitToWidth="true"
+            stylesheets="@style.css"
+            style="-fx-background-color:transparent;"> <VBox alignment="CENTER" spacing="30.0" styleClass="root">
+    <padding>
+        <Insets top="20" bottom="20" left="20" right="20"/>
+    </padding>
+
+    <Label text="Editeur d'images par Clément et Akim" styleClass="label"/>
+
+    <Button text="OUVRIR UNE IMAGE" onAction="#chargerImage"/>
+    <Button text="RESET IMAGE" onAction="#clicReset"/>
+
+    <Button text="GLOW UP VINTAGE" onAction="#clicBandW"/>
+    <Button text="MIRROR VIBE" onAction="#clicBoutonMiroir"/>
+    <Button text="INVERSEMENT COULEURS" onAction="#clicBoutonSwap"/>
+
+    <Button text="PROTÉGER L'IMAGE (CHIFFRER)" onAction="#clicChiffrer"/>
+    <Button text="DÉVERROUILLER (DÉCHIFFRER)" onAction="#clicDechiffrer"/>
+
+    <ImageView fx:id="vueImage" fitWidth="800" fitHeight="600" preserveRatio="true" smooth="true" styleClass="image-view"/>
+</VBox>
+
+</ScrollPane>

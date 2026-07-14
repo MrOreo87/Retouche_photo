@@ -1,0 +1,76 @@
+/* Fond de l'application */
+.root {
+    -fx-background-image: url("fond.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* 4. MODIF DU TITRE : Dégradé et bordure lumineuse */
+.titre-app {
+    -fx-text-fill: linear-gradient(to bottom right, #ffffff, #aaaaaa);
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.3) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 15 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 2);
+}
+
+/* La barre latérale translucide */
+.sidebar {
+    -fx-background-color: rgba(0, 0, 0, 0.75);
+    -fx-padding: 25;
+    -fx-spacing: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 0 1 0 0;
+}
+
+/* 3. COULEURS : Base commune des boutons */
+.button {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-pref-width: 230;
+    -fx-padding: 10;
+}
+
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-scale-x: 1.03; /* Petit effet de zoom au survol */
+    -fx-scale-y: 1.03;
+}
+
+/* Bouton Appliquer (Vert Succès) */
+.btn-valider {
+    -fx-background-color: #27ae60;
+    -fx-border-color: #2ecc71;
+}
+
+/* Bouton Reset (Orange/Saumon) */
+.btn-reset {
+    -fx-background-color: rgba(231, 76, 60, 0.2);
+    -fx-border-color: #e74c3c;
+}
+
+/* Boutons Sécurité (Bleu Nuit) */
+.btn-securite {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #34495e;
+}
+
+.label-sidebar {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* 5. OMBRE PORTÉE : Profondeur pour l'image */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 30, 0, 0, 0);
+}

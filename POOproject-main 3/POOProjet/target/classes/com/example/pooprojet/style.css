@@ -1,0 +1,42 @@
+.root {
+    /* On remplace la couleur par une image */
+    -fx-background-image: url("fond.jpg");
+
+    /* On dit à l'image de prendre toute la place (comme un poster géant) */
+    -fx-background-size: cover;
+
+    /* On centre l'image pour qu'elle soit bien placée */
+    -fx-background-position: center;
+
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Le style du bouton */
+.button {
+    -fx-background-color: white; /* Bleu clair */
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 20; /* Bords bien arrondis */
+    -fx-cursor: hand;
+}
+
+/* Le style du grand titre */
+.label {
+    -fx-text-fill: black; /* Un beau jaune "Or" qui ressort bien sur le sombre */
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    /* On ajoute une petite ombre noire derrière les lettres pour mieux lire */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 5, 0, 2, 2);
+}
+
+/* Quand on passe la souris sur le bouton */
+.button:hover {
+    -fx-background-color: #2980b9; /* Un bleu un peu plus foncé */
+}
+
+/* Le cadre de l'image */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0); /* Une petite ombre */
+}

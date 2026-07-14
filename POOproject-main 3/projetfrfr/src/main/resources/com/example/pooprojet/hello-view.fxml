@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="controleur.HelloController" stylesheets="@style.css" styleClass="root">
+
+    <ImageView fx:id="vueImage" fitWidth="900" fitHeight="700" preserveRatio="true" smooth="true" styleClass="image-view" />
+
+    <HBox pickOnBounds="false">
+        <VBox styleClass="sidebar" alignment="TOP_CENTER">
+            <Label text="ÉDITEUR PRO" styleClass="titre-app"/>
+
+            <Label text="GESTION" styleClass="label-sidebar"/>
+            <Button text="📂 OUVRIR UNE IMAGE" onAction="#chargerImage"/>
+            <Button text="🔄 RESET IMAGE" onAction="#clicReset" styleClass="btn-reset"/>
+
+            <Separator />
+
+            <Label text="FILTRES" styleClass="label-sidebar"/>
+            <ComboBox fx:id="filtreComboBox" promptText="Choisir un filtre..." prefWidth="230.0" />
+            <Button text="✨ APPLIQUER LE FILTRE" onAction="#clicAppliquerFiltre" styleClass="btn-valider" />
+
+            <Separator />
+
+            <Label text="SÉCURITÉ" styleClass="label-sidebar"/>
+            <Button text="🔒 PROTÉGER (CHIFFRER)" onAction="#clicChiffrer" styleClass="btn-securite"/>
+            <Button text="🔓 DÉVERROUILLER" onAction="#clicDechiffrer" styleClass="btn-securite"/>
+
+            <Separator />
+
+            <Button text="💾 SAUVEGARDER JSON" onAction="#clicSauvegarderMetadata" styleClass="btn-securite" />
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" pickOnBounds="false" />
+    </HBox>
+
+</StackPane>
